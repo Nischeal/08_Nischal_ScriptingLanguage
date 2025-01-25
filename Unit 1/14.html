@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Array Items</title>
+</head>
+<body>
+    <h2>14. Sort Items of an Array</h2>
+    <input type="text" id="sortArrayInput" placeholder="Enter array elements separated by commas">
+    <button onclick="sortArray()">Sort Array</button>
+    <p id="sortArrayOutput"></p>
+</body>
+<script type="text/JavaScript">
+    function sortArray() {
+        const input = document.getElementById('sortArrayInput').value.split(',').map(Number);
+        const sortedArray = input.sort((a, b) => a - b);
+        document.getElementById('sortArrayOutput').innerText = `Sorted Array: ${sortedArray.join(', ')}`;
+    }
+</script>
+</html>

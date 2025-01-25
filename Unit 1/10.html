@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Largest in Array</title>
+</head>
+<body>
+    <h2>10. Find the Largest Number in an Array</h2>
+    <input type="text" id="arrayInput" placeholder="Enter numbers separated by commas">
+    <button onclick="findLargestInArray()">Find Largest</button>
+    <p id="largestArrayOutput"></p>
+</body>
+<script type="text/JavaScript">
+    function findLargestInArray() {
+        const input = document.getElementById('arrayInput').value.split(',').map(Number);
+        const largest = Math.max(...input);
+        document.getElementById('largestArrayOutput').innerText = `Largest: ${largest}`;
+    }
+</script>
+</html>

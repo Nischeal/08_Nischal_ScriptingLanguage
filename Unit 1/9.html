@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Three Integers</title>
+</head>
+<body>
+    <h2>9. Compare Three Integers</h2>
+    <input type="number" id="numX" placeholder="Enter first integer">
+    <input type="number" id="numY" placeholder="Enter second integer">
+    <input type="number" id="numZ" placeholder="Enter third integer">
+    <button onclick="compareThreeIntegers()">Compare</button>
+    <p id="compareThreeOutput"></p>
+</body>
+<script type="text/JavaScript">
+    function compareThreeIntegers() {
+        const x = Number(document.getElementById('numX').value);
+        const y = Number(document.getElementById('numY').value);
+        const z = Number(document.getElementById('numZ').value);
+        const largest = Math.max(x, y, z);
+        const smallest = Math.min(x, y, z);
+        document.getElementById('compareThreeOutput').innerText = `Largest: ${largest}, Smallest: ${smallest}`;
+    }
+</script>
+</html>

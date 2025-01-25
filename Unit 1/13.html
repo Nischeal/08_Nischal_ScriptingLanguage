@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Array Elements</title>
+</head>
+<body>
+    <h2>13. Join Array Elements</h2>
+    <input type="text" id="joinArrayInput" placeholder="Enter array elements separated by commas">
+    <button onclick="joinArrayElements()">Join Elements</button>
+    <p id="joinArrayOutput"></p>
+</body>
+<script type="text/JavaScript">
+    function joinArrayElements() {
+        const input = document.getElementById('joinArrayInput').value.split(',');
+        const joinedString = input.join(', ');
+        document.getElementById('joinArrayOutput').innerText = `Joined String: ${joinedString}`;
+    }
+</script>
+</html>

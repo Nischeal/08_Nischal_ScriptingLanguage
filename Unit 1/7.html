@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operations</title>
+</head>
+<body>
+    <h2>7. Basic Arithmetic Operations</h2>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <button onclick="performOperations()">Calculate</button>
+    <p id="arithmeticOutput"></p>
+</body>
+<script type="text/JavaScript">
+    function performOperations() {
+        const num1 = parseFloat(document.getElementById('num1').value);
+        const num2 = parseFloat(document.getElementById('num2').value);
+        if (!isNaN(num1) && !isNaN(num2)) {
+            const addition = num1 + num2;
+            const subtraction = num1 - num2;
+            const multiplication = num1 * num2;
+            const division = (num2 !== 0) ? num1 / num2 : 'Infinity';
+            document.getElementById('arithmeticOutput').innerText =
+                `Addition: ${addition}, Subtraction: ${subtraction}, Multiplication: ${multiplication}, Division: ${division}`;
+        } else {
+            document.getElementById('arithmeticOutput').innerText = 'Please enter valid numbers!';
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekend Finder</title>
+</head>
+<body>
+    <h2>20. Find the Weekend Date</h2>
+    <button onclick="getWeekendDate()">Show Weekend</button>
+    <p id="weekendOutput"></p>
+</body>
+<script type="text/JavaScript">
+    function getWeekendDate() {
+        const today = new Date();
+        const daysUntilSaturday = (6 - today.getDay() + 7) % 7;
+        const weekendDate = new Date(today.getTime() + daysUntilSaturday * 24 * 60 * 60 * 1000);
+        document.getElementById('weekendOutput').innerText = `Next Weekend: ${weekendDate.toDateString()}`;
+    }
+</script>
+</html>

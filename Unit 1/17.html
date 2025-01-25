@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest of Five Numbers</title>
+</head>
+<body>
+    <h2>17. Find the Largest of Five Numbers</h2>
+    <input type="text" id="largestFiveInput" placeholder="Enter 5 numbers separated by commas">
+    <button onclick="findLargestOfFive()">Find Largest</button>
+    <p id="largestFiveOutput"></p>
+</body>
+<script type="text/JavaScript">
+    function findLargestOfFive() {
+        const input = document.getElementById('largestFiveInput').value.split(',').map(Number);
+        const largest = Math.max(...input);
+        alert(`Largest Number: ${largest}`);
+        document.getElementById('largestFiveOutput').innerText = `Largest Number: ${largest}`;
+    }
+</script>
+</html>

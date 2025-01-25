@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabetical Order</title>
+</head>
+<body>
+    <h2>2. Alphabetical Order</h2>
+    <input type="text" id="alphabetInput" placeholder="Enter a string">
+    <button onclick="processAlphabeticalOrder()">Sort Alphabetically</button>
+    <p id="alphabetOutput"></p>
+</body>
+<script type="text/JavaScript">
+    function alphabeticalOrder(str) {
+        return str.split('').sort().join('');
+    }
+    function processAlphabeticalOrder() {
+        const input = document.getElementById('alphabetInput').value;
+        const output = alphabeticalOrder(input);
+        document.getElementById('alphabetOutput').innerText = `Sorted: ${output}`;
+    }
+</script>
+</html>

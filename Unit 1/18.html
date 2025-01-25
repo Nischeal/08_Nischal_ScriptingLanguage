@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference Between Dates</title>
+</head>
+<body>
+    <h2>18. Difference Between Dates</h2>
+    <input type="date" id="date1">
+    <input type="date" id="date2">
+    <button onclick="calculateDateDifference()">Calculate Difference</button>
+    <p id="dateDiffOutput"></p>
+</body>
+<script type="text/JavaScript">
+    function calculateDateDifference() {
+        const date1 = new Date(document.getElementById('date1').value);
+        const date2 = new Date(document.getElementById('date2').value);
+        const diffInTime = Math.abs(date2 - date1);
+        const diffInDays = Math.ceil(diffInTime / (1000 * 60 * 60 * 24));
+        document.getElementById('dateDiffOutput').innerText = `Difference in Days: ${diffInDays}`;
+    }
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Two Integers</title>
+</head>
+<body>
+    <h2>8. Compare Two Integers</h2>
+    <input type="number" id="numA" placeholder="Enter first integer">
+    <input type="number" id="numB" placeholder="Enter second integer">
+    <button onclick="compareTwoIntegers()">Compare</button>
+    <p id="compareOutput"></p>
+</body>
+<script type="text/JavaScript">
+    function compareTwoIntegers() {
+        const a = Number(document.getElementById('numA').value);
+        const b = Number(document.getElementById('numB').value);
+        const larger = a > b ? a : b;
+        const smaller = a < b ? a : b;
+        document.getElementById('compareOutput').innerText = `Larger: ${larger}, Smaller: ${smaller}`;
+    }
+</script>
+</html>

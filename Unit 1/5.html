@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Date Formats</title>
+</head>
+<body>
+    <h2>5. Display Current Date</h2>
+    <button onclick="showCurrentDate()">Show Date</button>
+    <p id="dateOutput"></p>
+</body>
+<script type="text/JavaScript">
+    function showCurrentDate() {
+        const now = new Date();
+        const formats = [
+            now.toLocaleDateString('en-GB').replace(/\//g, '-'), 
+            now.toLocaleDateString('en-GB'),                    
+            now.toLocaleDateString('en-US').replace(/\//g, '-'), 
+            now.toLocaleDateString('en-US'),                    
+            now.toDateString()                                  
+        ];
+        document.getElementById('dateOutput').innerText = `Formats: ${formats.join(', ')}`;
+    }
+</script>
+</html>

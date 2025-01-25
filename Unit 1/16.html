@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd or Even</title>
+</head>
+<body>
+    <h2>16. Check Odd or Even</h2>
+    <button onclick="checkOddEven()">Show Odd/Even Numbers</button>
+    <ul id="oddEvenOutput"></ul>
+</body>
+<script type="text/JavaScript">
+    function checkOddEven() {
+        const output = document.getElementById('oddEvenOutput');
+        output.innerHTML = '';
+        for (let i = 0; i <= 15; i++) {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${i} is ${i % 2 === 0 ? 'Even' : 'Odd'}`;
+            output.appendChild(listItem);
+        }
+    }
+</script>
+</html>

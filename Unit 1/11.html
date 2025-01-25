@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Smallest in Array</title>
+</head>
+<body>
+    <h2>11. Find the Smallest Number in an Array</h2>
+    <input type="text" id="smallestArrayInput" placeholder="Enter numbers separated by commas">
+    <button onclick="findSmallestInArray()">Find Smallest</button>
+    <p id="smallestArrayOutput"></p>
+</body>
+<script type="text/JavaScript">
+    function findSmallestInArray() {
+        const input = document.getElementById('smallestArrayInput').value.split(',').map(Number);
+        const smallest = Math.min(...input);
+        document.getElementById('smallestArrayOutput').innerText = `Smallest: ${smallest}`;
+    }
+</script>
+</html>
