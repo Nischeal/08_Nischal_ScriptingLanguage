@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alphabetical Order</title>
+    <title>Count Vowels</title>
 </head>
 <body>
-    <h2>2. Alphabetical Order</h2>
-    <input type="text" id="alphabetInput" placeholder="Enter a string">
-    <button onclick="processAlphabeticalOrder()">Sort Alphabetically</button>
-    <p id="alphabetOutput"></p>
+    <h2>3. Count Vowels</h2>
+    <input type="text" id="vowelInput" placeholder="Enter a string">
+    <button onclick="processVowelCount()">Count Vowels</button>
+    <p id="vowelOutput"></p>
 </body>
 <script type="text/JavaScript">
-    function alphabeticalOrder(str) {
-        return str.split('').sort().join('');
+    function countVowels(str) {
+        const vowels = 'aeiouAEIOU';
+        return str.split('').filter(char => vowels.includes(char)).length;
     }
-    function processAlphabeticalOrder() {
-        const input = document.getElementById('alphabetInput').value;
-        const output = alphabeticalOrder(input);
-        document.getElementById('alphabetOutput').innerText = `Sorted: ${output}`;
+    function processVowelCount() {
+        const input = document.getElementById('vowelInput').value;
+        const output = countVowels(input);
+        document.getElementById('vowelOutput').innerText = `Number of Vowels: ${output}`;
     }
 </script>
 </html>
